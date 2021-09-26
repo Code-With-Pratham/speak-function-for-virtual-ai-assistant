@@ -1,0 +1,13 @@
+import pyttsx3
+#pip install pyttsx3
+engine = pyttsx3.init("sapi5")
+voices = engine.getProperty("voices")
+engine.setProperty("voice",voices[0].id)#try 0 or 1 for voice 
+def Speak(text):
+    engine.say(text)
+    engine.runAndWait()
+
+#let's try it out
+
+Speak("Hello sir! I am your virtual assistant how can i help you")
+#just run the program
